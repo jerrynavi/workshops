@@ -1,5 +1,5 @@
 import enUS from 'lang/en-US.json';
-import fr from 'lang/fr.json';
+import hrHR from 'lang/hr-HR.json';
 
 type LocalesSupported = Record<string, Record<string, string>>;
 
@@ -15,7 +15,7 @@ export const loadLocaleData = (locale?: string) => {
   // next, create an object with the locale files currently available/supported
   const localesSupported: LocalesSupported = {
     'en-US': enUS,
-    fr,
+    'hr-HR': hrHR,
   };
 
   // finally, check if user's locale is supported. if not, use 'en-US' as the default

@@ -11,9 +11,6 @@ function App() {
       <p className="font-primary">
         <FormattedMessage id="app.primary" />
       </p>
-      <p className="font-secondary">
-        <FormattedMessage id="app.secondary" />
-      </p>
     </div>
   );
 }
