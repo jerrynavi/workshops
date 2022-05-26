@@ -1,3 +1,4 @@
-import User from './user';
+import CategoryType from './category';
+import Workshop from './workshop';
 
-export type { User };
+export type { Workshop, CategoryType };
