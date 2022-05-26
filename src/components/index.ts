@@ -1,3 +1,3 @@
-import DummyComponent from './dummy-component';
+import WorkshopCard from './workshop-card';
 
-export { DummyComponent };
+export { WorkshopCard };

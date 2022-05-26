@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @import './fonts/stylesheet.css';
+@import './card.css';
+@import './images.css';
+@import './button.css';
 
 html,
 body,

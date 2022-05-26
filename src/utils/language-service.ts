@@ -22,7 +22,7 @@ export const loadLocaleData = (locale?: string) => {
   if (
     Object.prototype.hasOwnProperty.call(localesSupported, userLocale) === false
   ) {
-    userLocale = 'en-US';
+    userLocale = 'hr-HR';
   }
 
   return {

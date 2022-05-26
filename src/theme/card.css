@@ -1,0 +1,40 @@
+.card {
+  @apply bg-white border-lighter-gray border rounded-lg overflow-hidden hover:shadow-lg transition-shadow
+  flex flex-row md:flex-col;
+}
+
+.card-image {
+  @apply w-5/12 md:w-full md:max-h-80;
+}
+
+.card-image img {
+  @apply w-auto h-full md:w-full md:h-auto object-cover;
+}
+
+.card-content {
+  @apply p-5 pl-6 md:pt-5 md:px-10 md:pb-9;
+}
+
+.icon-w-label {
+  @apply flex items-center;
+}
+
+.icon-w-label span {
+  @apply text-darker-gray font-bold text-h6-mobile;
+}
+
+.card-title {
+  @apply text-blue font-bold text-h4-mobile md:text-h4 mt-1 md:my-[10px];
+}
+
+.card-footer {
+  @apply flex flex-row md:flex-col items-baseline justify-between;
+}
+
+.price-display {
+  @apply font-bold text-darker-gray text-h3-mobile md:text-h3;
+}
+
+.currency {
+  @apply text-h6-mobile md:text-h6;
+}

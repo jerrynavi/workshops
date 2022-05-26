@@ -1,0 +1,15 @@
+.btn {
+  @apply font-bold text-base text-darker-gray text-center p-3 shadow rounded-md border;
+}
+
+.btn-primary {
+  @apply border-primary bg-primary;
+}
+
+.btn-outline {
+  @apply bg-transparent;
+}
+
+.btn-clear {
+  @apply border-none bg-transparent;
+}

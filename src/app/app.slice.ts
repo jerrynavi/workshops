@@ -1,23 +1,17 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 interface AppState {
   pageTitle: string;
 }
 
 const initialState: AppState = {
-  pageTitle: 'CRA Template',
+  pageTitle: '',
 };
 
 const appSlice = createSlice({
   name: 'app',
   initialState,
-  reducers: {
-    setPageTitle(state, { payload }: PayloadAction<string>) {
-      state.pageTitle = payload;
-    },
-  },
+  reducers: {},
 });
-
-export const { setPageTitle } = appSlice.actions;
 
 export default appSlice.reducer;
