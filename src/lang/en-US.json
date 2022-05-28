@@ -1,4 +1,5 @@
 {
   "addToCart": "Add to Cart",
-  "cartEmpty": "Cart is Empty"
+  "cartEmpty": "Cart is Empty",
+  "filterHeader": "Filter by category:"
 }

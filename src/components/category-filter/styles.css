@@ -1,0 +1,23 @@
+.category-filter {
+  @apply hidden md:block;
+}
+
+.category-filter ul {
+  @apply list-none;
+}
+
+.category-filter li {
+  @apply text-h5 capitalize font-bold text-darker-gray hover:text-blue my-3 transition-colors relative;
+}
+
+.category-filter a {
+  @apply relative;
+}
+
+.category-filter a:after {
+  @apply content-[''] absolute left-0 -bottom-1 w-full h-1 opacity-0 bg-blue transition-opacity;
+}
+
+.category-filter li:hover a {
+  @apply after:opacity-100;
+}

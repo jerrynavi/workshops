@@ -1,4 +1,5 @@
 {
   "addToCart": "Dodaj u košaricu",
-  "cartEmpty": "Košarica je prazna"
+  "cartEmpty": "Košarica je prazna",
+  "filterHeader": "Filtriraj po kategoriji:"
 }

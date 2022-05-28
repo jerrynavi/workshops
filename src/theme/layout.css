@@ -12,3 +12,8 @@
   @apply bg-light-gray bg-opacity-10 pl-10 md:pl-20 py-3 md:py-8
   sticky bottom-0;
 }
+
+.page {
+  @apply min-h-full w-full flex flex-row flex-wrap
+  py-6 md:py-[60px] px-5;
+}
