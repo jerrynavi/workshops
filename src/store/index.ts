@@ -8,13 +8,19 @@ import rootReducer, { RootState } from './rootReducer';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { offlineStorage } from './middleware/offlineStorage';
 import { STORE_NAME } from 'utils/constants';
+import { api } from 'core';
 
 const savedLocalStorage = localStorage.getItem(STORE_NAME);
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    [api.reducerPath]: api.reducer,
+    ...rootReducer,
+  },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().prepend(offlineStorage as Middleware<any>),
+    getDefaultMiddleware()
+      .prepend(offlineStorage as Middleware<any>)
+      .prepend(api.middleware),
   ...(savedLocalStorage &&
     savedLocalStorage?.length > 0 && {
       preloadedState: JSON.parse(savedLocalStorage),
