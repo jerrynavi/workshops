@@ -35,10 +35,10 @@ export default function WorkshopCard({
                     {parts
                       .filter((p) => new RegExp(/^[0-9]/).test(p.value))
                       .map((part, index) => (
-                        <>
-                          <span key={index}>{part.value}</span>
+                        <span key={index}>
+                          <span>{part.value}</span>
                           <span>.</span>
-                        </>
+                        </span>
                       ))}
                   </>
                 )}
