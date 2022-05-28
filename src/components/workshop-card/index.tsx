@@ -1,6 +1,11 @@
 import { CalendarIcon, ClockIcon, ShoppingCartOutline } from 'components/icons';
 import { Workshop } from 'models';
-import { FormattedMessage, FormattedNumber } from 'react-intl';
+import {
+  FormattedDateParts,
+  FormattedMessage,
+  FormattedNumber,
+  FormattedTime,
+} from 'react-intl';
 
 export default function WorkshopCard({
   title,
@@ -18,11 +23,33 @@ export default function WorkshopCard({
         <div className="flex flex-row items-center">
           <p className="m-0 mr-3 icon-w-label">
             <CalendarIcon />
-            <span className="inline-block ml-2">27.6.2020.</span>
+            <span className="inline-block ml-2">
+              <FormattedDateParts
+                value={date}
+                year="numeric"
+                day="2-digit"
+                month="2-digit"
+              >
+                {(parts) => (
+                  <>
+                    {parts
+                      .filter((p) => new RegExp(/^[0-9]/).test(p.value))
+                      .map((part, index) => (
+                        <>
+                          <span key={index}>{part.value}</span>
+                          <span>.</span>
+                        </>
+                      ))}
+                  </>
+                )}
+              </FormattedDateParts>
+            </span>
           </p>
           <p className="m-0 icon-w-label">
             <ClockIcon />
-            <span className="inline-block ml-2">09:00h</span>
+            <span className="inline-block ml-2">
+              <FormattedTime value={date} />
+            </span>
           </p>
         </div>
 
