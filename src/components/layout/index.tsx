@@ -4,7 +4,7 @@ import Header from './Header';
 
 export default function Layout() {
   return (
-    <div className="w-full min-h-full flex">
+    <div className="w-full min-h-full flex flex-col">
       <Header />
       <main>
         <Outlet />
