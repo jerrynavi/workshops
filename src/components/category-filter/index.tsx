@@ -1,40 +1,11 @@
-import {
-  BrushIcon,
-  ChevronDownIcon,
-  CodeIcon,
-  FlashIcon,
-  LayoutIcon,
-} from 'components/icons';
+import { ChevronDownIcon } from 'components/icons';
 import { useGetCategoriesQuery } from 'core';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
-import { CategoryType } from 'models';
 import { FormattedMessage } from 'react-intl';
 import { Listbox, Transition } from '@headlessui/react';
 import './styles.css';
 import { Fragment, useEffect } from 'react';
-
-function getCategoryIcon(name: CategoryType) {
-  let icon: JSX.Element = <></>;
-
-  switch (name) {
-    case 'marketing':
-      icon = <FlashIcon />;
-      break;
-    case 'design':
-      icon = <BrushIcon />;
-      break;
-    case 'frontend':
-      icon = <LayoutIcon />;
-      break;
-    case 'backend':
-      icon = <CodeIcon />;
-      break;
-
-    default:
-      break;
-  }
-  return icon;
-}
+import { getCategoryIcon } from 'utils';
 
 export default function CategoryFilter() {
   const { data: categories, isFetching } = useGetCategoriesQuery();
