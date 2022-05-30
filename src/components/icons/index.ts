@@ -1,3 +1,4 @@
+import ArrowBackIcon from './ArrowBackIcon';
 import BrushIcon from './BrushIcon';
 import CalendarIcon from './CalendarIcon';
 import ChevronDownIcon from './ChevronDownIcon';
@@ -16,4 +17,5 @@ export {
   CodeIcon,
   BrushIcon,
   ChevronDownIcon,
+  ArrowBackIcon,
 };
