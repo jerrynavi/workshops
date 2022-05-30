@@ -25,7 +25,9 @@ const slice = createSlice({
           arg: { originalArgs },
         } = meta;
         const { data, last } = payload;
-        state.data = uniqBy([...state.data, ...data], 'id');
+        state.data = uniqBy([...state.data, ...data], 'id').sort((a, b) =>
+          b.date.localeCompare(a.date),
+        );
         state.lastPage = last;
         if (originalArgs != null) {
           state.activeCategory = originalArgs.category;
