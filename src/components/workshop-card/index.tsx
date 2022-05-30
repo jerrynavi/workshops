@@ -7,6 +7,7 @@ import {
   FormattedTime,
 } from 'react-intl';
 import { Link } from 'react-router-dom';
+import { getCategoryIcon } from 'utils';
 
 export default function WorkshopCard({
   title,
@@ -14,11 +15,16 @@ export default function WorkshopCard({
   imageUrl,
   price,
   id,
+  category,
 }: Workshop) {
   return (
     <article className="card">
       <figure className="card-image">
-        <img src={imageUrl} alt={title} />
+        <Link to={`/workshop/${id}`} title={`Link to ${title}`}>
+          <img src={imageUrl} alt={title} />
+        </Link>
+
+        <div className="category-icon">{getCategoryIcon(category)}</div>
       </figure>
 
       <div className="card-content">
