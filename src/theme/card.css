@@ -4,7 +4,7 @@
 }
 
 .card-image {
-  @apply w-5/12 md:w-full md:max-h-80;
+  @apply w-4/12 md:w-full md:max-h-80;
 }
 
 .card-image img {
@@ -12,7 +12,7 @@
 }
 
 .card-content {
-  @apply p-5 pl-6 md:pt-5 md:px-10 md:pb-9;
+  @apply p-5 pl-6 md:pt-5 w-8/12 md:w-full md:px-10 md:pb-9 md:flex md:flex-col md:h-full;
 }
 
 .icon-w-label {
@@ -24,11 +24,11 @@
 }
 
 .card-title {
-  @apply text-blue font-bold text-h4-mobile md:text-h4 mt-1 md:my-[10px];
+  @apply text-blue font-bold text-h4-mobile md:text-h4 mt-1 md:my-[10px] overflow-hidden line-clamp-2 md:line-clamp-3;
 }
 
 .card-footer {
-  @apply flex flex-row md:flex-col items-baseline justify-between;
+  @apply flex flex-row md:flex-col items-baseline justify-between md:mt-auto;
 }
 
 .price-display {

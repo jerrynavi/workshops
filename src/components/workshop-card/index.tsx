@@ -6,12 +6,14 @@ import {
   FormattedNumber,
   FormattedTime,
 } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 export default function WorkshopCard({
   title,
   date,
   imageUrl,
   price,
+  id,
 }: Workshop) {
   return (
     <article className="card">
@@ -53,7 +55,9 @@ export default function WorkshopCard({
           </p>
         </div>
 
-        <h2 className="card-title">{title}</h2>
+        <h2 className="card-title" title={title}>
+          <Link to={`/workshop/${id}`}>{title}</Link>
+        </h2>
 
         <div className="card-footer">
           <p className="price-display mb-5">
