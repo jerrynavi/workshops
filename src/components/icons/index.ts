@@ -1,5 +1,6 @@
 import BrushIcon from './BrushIcon';
 import CalendarIcon from './CalendarIcon';
+import ChevronDownIcon from './ChevronDownIcon';
 import ClockIcon from './ClockIcon';
 import CodeIcon from './CodeIcon';
 import FlashIcon from './FlashIcon';
@@ -14,4 +15,5 @@ export {
   LayoutIcon,
   CodeIcon,
   BrushIcon,
+  ChevronDownIcon,
 };

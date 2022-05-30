@@ -1,3 +1,3 @@
-type CategoryType = 'marketing' | 'backend' | 'frontend' | 'design';
+type CategoryType = 'marketing' | 'backend' | 'frontend' | 'design' | 'all';
 
 export default CategoryType;
