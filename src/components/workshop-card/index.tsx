@@ -1,9 +1,9 @@
 import { CalendarIcon, ClockIcon, ShoppingCartOutline } from 'components/icons';
+import Price from 'components/Price';
 import { Workshop } from 'models';
 import {
   FormattedDateParts,
   FormattedMessage,
-  FormattedNumber,
   FormattedTime,
 } from 'react-intl';
 import { Link } from 'react-router-dom';
@@ -24,7 +24,9 @@ export default function WorkshopCard({
           <img src={imageUrl} alt={title} />
         </Link>
 
-        <div className="category-icon">{getCategoryIcon(category)}</div>
+        <div className="category-icon absolute -right-5 top-5 md:top-[unset] md:-bottom-5 md:right-5">
+          {getCategoryIcon(category)}
+        </div>
       </figure>
 
       <div className="card-content">
@@ -66,14 +68,7 @@ export default function WorkshopCard({
         </h2>
 
         <div className="card-footer">
-          <p className="price-display mb-5">
-            <FormattedNumber
-              value={price}
-              style="decimal"
-              minimumFractionDigits={2}
-            />
-            <span className="currency">&nbsp;EUR</span>
-          </p>
+          <Price value={price} />
 
           <button className="btn btn-primary block w-fit md:w-full">
             <span className="hidden md:inline">
