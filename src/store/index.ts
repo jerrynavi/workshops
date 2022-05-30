@@ -13,10 +13,7 @@ import { api } from 'core';
 const savedLocalStorage = localStorage.getItem(STORE_NAME);
 
 const store = configureStore({
-  reducer: {
-    [api.reducerPath]: api.reducer,
-    ...rootReducer,
-  },
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .prepend(offlineStorage as Middleware<any>)

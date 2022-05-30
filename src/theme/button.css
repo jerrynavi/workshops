@@ -13,3 +13,11 @@
 .btn-clear {
   @apply border-none bg-transparent;
 }
+
+.load-more {
+  @apply shadow-none rounded-none bg-transparent border-blue border-2 border-t-0 border-l-0 border-r-0 hover:rounded-md hover:bg-blue hover:text-white transition-all;
+}
+
+.btn[disabled] {
+  @apply cursor-not-allowed;
+}

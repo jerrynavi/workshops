@@ -59,7 +59,7 @@ export default function CategoryFilter() {
 
   return (
     <div>
-      <h6 className="text-light-gray font-bold text-h6 hidden md:block md:ml-[58px] md:mb-[30px]">
+      <h6 className="text-light-gray font-bold text-h6 hidden md:block md:ml-[58px] md:mb-[30px] mt-28">
         <FormattedMessage id="filterHeader" />
       </h6>
 
