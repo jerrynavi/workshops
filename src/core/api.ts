@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { CategoryType, Workshop } from 'models';
+import { CategoryType, User, Workshop } from 'models';
 import li from 'li';
 
 type WorkshopCollectionQueryType = {
@@ -62,11 +62,24 @@ export const api = createApi({
     getCategories: builder.query<CategoryType[], void>({
       query: () => 'categories',
     }),
+    getUserById: builder.query<User, number>({
+      query: (id: number) => `users/${id}`,
+      transformResponse: (response: User) => {
+        // doing this as we do not want to serve
+        // emails/password hashes
+        const { id, name } = response;
+        return {
+          id,
+          name,
+        };
+      },
+    }),
   }),
 });
 
 export const {
   useGetCategoriesQuery,
-  useGetWorkshopByIdQuery,
+  useLazyGetWorkshopByIdQuery,
   useLazyGetWorkshopsQuery,
+  useLazyGetUserByIdQuery,
 } = api;
