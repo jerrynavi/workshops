@@ -1,0 +1,17 @@
+.add-to-cart {
+  @apply md:shadow-lg flex flex-row md:flex-col relative overflow-visible
+  py-[18px] px-5
+  h-fit md:py-[50px] md:px-10 md:mt-10;
+}
+
+.add-to-cart button:not(.btn-primary) {
+  @apply font-bold text-blue border border-blue rounded-lg text-h5-mobile md:text-h5 flex items-center gap-x-2 w-fit py-3 pl-2 pr-4;
+}
+
+.add-to-cart ul {
+  @apply absolute mt-1 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10;
+}
+
+.add-to-cart li {
+  @apply relative cursor-default select-none p-2;
+}
