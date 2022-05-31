@@ -1,5 +1,10 @@
 {
   "addToCart": "Dodaj u košaricu",
+  "addToCartAbbr": "Dodaj u",
   "cartEmpty": "Košarica je prazna",
-  "filterHeader": "Filtriraj po kategoriji:"
+  "filterHeader": "Filtriraj po kategoriji:",
+  "backButton": "Natrag",
+  "withUser": "sa",
+  "buyTicketCallout": "Kupite svoju kartu",
+  "subtotal": "Međuzbroj:"
 }

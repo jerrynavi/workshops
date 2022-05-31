@@ -1,5 +1,10 @@
 {
   "addToCart": "Add to Cart",
+  "addToCartAbbr": "Add to",
   "cartEmpty": "Cart is Empty",
-  "filterHeader": "Filter by category:"
+  "filterHeader": "Filter by category:",
+  "backButton": "Back",
+  "withUser": "With",
+  "buyTicketCallout": "Buy your ticket",
+  "subtotal": "Subtotal:"
 }

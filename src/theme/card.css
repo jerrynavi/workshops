@@ -13,8 +13,7 @@
 
 .category-icon {
   @apply rounded-md flex justify-center items-center p-[8px] md:p-[9px] w-8 h-8 md:w-10 md:h-10
-  bg-darker-gray text-white
-  absolute -right-5 top-5 md:top-[unset] md:-bottom-5 md:right-5;
+  bg-darker-gray text-white;
 }
 
 .card-content {
@@ -34,7 +33,7 @@
 }
 
 .card-footer {
-  @apply flex flex-row md:flex-col items-baseline justify-between md:mt-auto;
+  @apply flex flex-row md:flex-col items-center justify-between md:mt-auto;
 }
 
 .price-display {

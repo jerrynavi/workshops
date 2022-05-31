@@ -2,15 +2,15 @@
   @apply font-bold text-base text-darker-gray text-center p-3 shadow rounded-md border;
 }
 
-.btn-primary {
+button.btn-primary {
   @apply border-primary bg-primary;
 }
 
-.btn-outline {
+button.btn-outline {
   @apply bg-transparent;
 }
 
-.btn-clear {
+button.btn-clear {
   @apply border-none bg-transparent;
 }
 
