@@ -3,6 +3,7 @@ import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
 const Home = lazy(() => import('pages/home'));
+const Workshop = lazy(() => import('pages/workshop'));
 
 const routesConfig: RouteObject[] = [
   {
@@ -14,8 +15,8 @@ const routesConfig: RouteObject[] = [
         element: <Home />,
       },
       {
-        path: '/workshop:id',
-        // element: <WorkshopDetail />,
+        path: '/workshop/:id',
+        element: <Workshop />,
       },
       {
         path: '/checkout',
