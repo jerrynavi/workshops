@@ -6,5 +6,6 @@
   "backButton": "Back",
   "withUser": "With",
   "buyTicketCallout": "Buy your ticket",
-  "subtotal": "Subtotal:"
+  "subtotal": "Subtotal:",
+  "itemsInCart": "{count} {count, plural, =1 {Workshop} other {Workshops}} in Cart"
 }

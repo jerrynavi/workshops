@@ -1,6 +1,6 @@
 import { AnyAction, CombinedState } from 'redux';
 import { EnhancedStore } from '@reduxjs/toolkit';
-import { RootState } from '..';
+import { RootState } from '../rootReducer';
 import { STORE_NAME } from 'utils/constants';
 
 export const offlineStorage =
