@@ -33,7 +33,7 @@
 }
 
 .card-footer {
-  @apply flex flex-row md:flex-col items-center justify-between md:mt-auto;
+  @apply flex flex-row md:flex-col items-center md:items-baseline justify-between md:mt-auto;
 }
 
 .price-display {

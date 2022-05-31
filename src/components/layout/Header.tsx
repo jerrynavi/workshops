@@ -1,11 +1,12 @@
 import Cart from 'components/cart';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
     <nav className="header">
-      <a href="/" title="Back to homepage">
+      <Link to="/" title="Back to homepage">
         <img src="/tined-logo.svg" alt="Tined Workshops logo" />
-      </a>
+      </Link>
 
       <Cart />
     </nav>
