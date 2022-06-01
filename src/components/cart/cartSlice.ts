@@ -1,14 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Workshop } from 'models';
 
-type CartItem = {
+export type CartItemType = {
   workshop: Workshop;
   total: number;
 };
 
 type CartState = {
   subtotal: number;
-  items: CartItem[];
+  items: CartItemType[];
   open: boolean;
 };
 
@@ -18,8 +18,12 @@ const initialState: CartState = {
   open: false,
 };
 
-function getSubtotal(items: CartItem[]) {
-  return items.map((item) => item.total).reduce((a, b) => a + b);
+function getSubtotal(items: CartItemType[]) {
+  return items
+    .map(({ workshop: { price }, total }) => {
+      return price * total;
+    })
+    .reduce((a, b) => a + b);
 }
 
 const cartSlice = createSlice({
@@ -30,19 +34,32 @@ const cartSlice = createSlice({
       state,
       { payload }: PayloadAction<{ workshop: Workshop; total: number }>,
     ) {
-      state.items.push(payload);
-      state.subtotal = getSubtotal(state.items);
+      const itemIndex = state.items.findIndex(
+        ({ workshop }) => workshop.id === payload.workshop.id,
+      );
+      if (itemIndex !== -1) {
+        state.items.splice(itemIndex, 1, payload);
+        state.subtotal = getSubtotal(state.items);
+      } else {
+        state.items.push(payload);
+        state.subtotal = getSubtotal(state.items);
+      }
+      if (!state.open) {
+        state.open = true;
+      }
     },
     removeFromCart(state, { payload }: PayloadAction<{ id: number }>) {
       state.items.splice(
         state.items.findIndex(({ workshop }) => workshop.id === payload.id),
         1,
       );
-      state.subtotal = getSubtotal(state.items);
+      if (state.items.length > 0) {
+        state.subtotal = getSubtotal(state.items);
+      }
     },
     updateCart(
       state,
-      { payload }: PayloadAction<{ id: number; data: CartItem }>,
+      { payload }: PayloadAction<{ id: number; data: CartItemType }>,
     ) {
       state.items.splice(
         state.items.findIndex(({ workshop }) => workshop.id === payload.id),
@@ -51,9 +68,13 @@ const cartSlice = createSlice({
       );
       state.subtotal = getSubtotal(state.items);
     },
+    toggleOpen(state, { payload }: PayloadAction<boolean>) {
+      state.open = payload;
+    },
   },
 });
 
 export default cartSlice.reducer;
 
-export const { addToCart, removeFromCart, updateCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, updateCart, toggleOpen } =
+  cartSlice.actions;

@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import CartSidebar from './CartSidebar';
 import Footer from './Footer';
 import Header from './Header';
 
@@ -9,6 +10,9 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
+      <aside>
+        <CartSidebar />
+      </aside>
       <Footer />
     </div>
   );

@@ -1,3 +1,4 @@
+import { addToCart } from 'components/cart/cartSlice';
 import { CalendarIcon, ClockIcon, ShoppingCartOutline } from 'components/icons';
 import Price from 'components/Price';
 import { Workshop } from 'models';
@@ -7,16 +8,18 @@ import {
   FormattedTime,
 } from 'react-intl';
 import { Link } from 'react-router-dom';
+import { useAppDispatch } from 'store/hooks';
 import { getCategoryIcon } from 'utils';
 
-export default function WorkshopCard({
-  title,
-  date,
-  imageUrl,
-  price,
-  id,
-  category,
-}: Workshop) {
+export default function WorkshopCard(props: Workshop) {
+  const dispatch = useAppDispatch();
+
+  const { title, date, imageUrl, price, id, category } = props;
+
+  function addItemToCart() {
+    dispatch(addToCart({ workshop: props, total: 1 }));
+  }
+
   return (
     <article className="card">
       <figure className="card-image">
@@ -68,9 +71,15 @@ export default function WorkshopCard({
         </h2>
 
         <div className="card-footer">
-          <Price value={price} />
+          <div className="md:mb-5">
+            <Price value={price} />
+          </div>
 
-          <button className="btn btn-primary block w-fit md:w-full">
+          <button
+            className="btn btn-primary block w-fit md:w-full"
+            type="button"
+            onClick={addItemToCart}
+          >
             <span className="hidden md:inline">
               <FormattedMessage id="addToCart" />
             </span>

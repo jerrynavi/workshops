@@ -36,6 +36,7 @@ module.exports = {
         DEFAULT: '1px 2px 8px 0px rgba(127, 127, 127, 0.25)',
         lg: '1px 2px 16px rgba(127, 127, 127, 0.25)',
         'inverse-lg': '-1px -2px 16px rgba(127, 127, 127, 0.25)',
+        cart: '-1px -2px 16px 0px rgba(127, 127, 127, 0.25)',
       },
       dropShadow: {
         DEFAULT: '-1px -2px 4px 0px rgba(127, 127, 127, 0.25)',
