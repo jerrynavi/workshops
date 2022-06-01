@@ -7,5 +7,6 @@
   "withUser": "sa",
   "buyTicketCallout": "Kupite svoju kartu",
   "subtotal": "Međuzbroj:",
-  "itemsInCart": "{count} {count, plural, =1 {Workshop} other {Workshops}} u Košari"
+  "items": "{count} {count, plural, =1 {Workshop} other {Workshops}}",
+  "inCart": "u Košari"
 }

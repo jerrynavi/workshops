@@ -7,5 +7,6 @@
   "withUser": "With",
   "buyTicketCallout": "Buy your ticket",
   "subtotal": "Subtotal:",
-  "itemsInCart": "{count} {count, plural, =1 {Workshop} other {Workshops}} in Cart"
+  "items": "{count} {count, plural, =1 {Workshop} other {Workshops}}",
+  "inCart": "in Cart"
 }
