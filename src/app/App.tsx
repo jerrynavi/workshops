@@ -7,7 +7,7 @@ import { Suspense } from 'react';
 import PageLoading from 'components/page-loading';
 import { ToastContainer } from 'react-toastify';
 
-function AppRoutes() {
+export function AppRoutes() {
   const routes = useRoutes(routesConfig);
   return routes;
 }

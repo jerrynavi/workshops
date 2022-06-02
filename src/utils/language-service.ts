@@ -25,7 +25,7 @@ const loadLocaleData = (locale?: string) => {
   if (
     Object.prototype.hasOwnProperty.call(localesSupported, userLocale) === false
   ) {
-    userLocale = 'hr-HR';
+    userLocale = 'en-US';
   }
 
   return {

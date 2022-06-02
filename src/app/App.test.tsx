@@ -1,9 +1,12 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { screen } from '@testing-library/react';
+import { setup } from 'utils/test-utils';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Home page', () => {
+  it('renders the "Workshops" title', async () => {
+    setup(['/']);
+    const workshopTitle = await screen.findByRole('heading', {
+      name: /workshops/i,
+    });
+    expect(workshopTitle).toBeInTheDocument();
+  });
 });
