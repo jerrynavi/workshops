@@ -1,6 +1,6 @@
 import { FormattedMessage } from 'react-intl';
 import { useAppDispatch, useCart } from 'store/hooks';
-import { toggleOpen } from './cartSlice';
+import { toggleSidebarOpen } from './cartSlice';
 import ShoppingCartIcon from './ShoppingCartIcon';
 
 export default function Cart() {
@@ -8,7 +8,7 @@ export default function Cart() {
   const dispatch = useAppDispatch();
 
   function openCart() {
-    dispatch(toggleOpen(true));
+    dispatch(toggleSidebarOpen(true));
   }
 
   return (

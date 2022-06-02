@@ -68,13 +68,20 @@ const cartSlice = createSlice({
       );
       state.subtotal = getSubtotal(state.items);
     },
-    toggleOpen(state, { payload }: PayloadAction<boolean>) {
+    toggleSidebarOpen(state, { payload }: PayloadAction<boolean>) {
       state.open = payload;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase('cart/RESET', (state) => {
+      state.items = [];
+      state.open = false;
+      state.subtotal = 0;
+    });
   },
 });
 
 export default cartSlice.reducer;
 
-export const { addToCart, removeFromCart, updateCart, toggleOpen } =
+export const { addToCart, removeFromCart, updateCart, toggleSidebarOpen } =
   cartSlice.actions;
