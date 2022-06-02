@@ -7,6 +7,7 @@ import CloseIcon from './CloseIcon';
 import CodeIcon from './CodeIcon';
 import FlashIcon from './FlashIcon';
 import LayoutIcon from './LayoutIcon';
+import LoadingCircleIcon from './LoadingCircleIcon';
 import ShoppingCartOutline from './ShoppingCartOutline';
 import TrashIcon from './TrashIcon';
 
@@ -22,4 +23,5 @@ export {
   ArrowBackIcon,
   CloseIcon,
   TrashIcon,
+  LoadingCircleIcon,
 };

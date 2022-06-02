@@ -5,6 +5,7 @@
   "filterHeader": "Filter by category:",
   "backButton": "Back",
   "similarWorkshops": "Similar Workshops",
+  "fetchingWorkshops": "Fetching workshops...",
   "withUser": "With",
   "buyTicketCallout": "Buy your ticket",
   "subtotal": "Subtotal:",
