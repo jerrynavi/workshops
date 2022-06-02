@@ -5,7 +5,7 @@ type CheckoutState = {
 };
 
 const initialState: CheckoutState = {
-  isOpen: true,
+  isOpen: false,
 };
 
 const checkoutSlice = createSlice({
