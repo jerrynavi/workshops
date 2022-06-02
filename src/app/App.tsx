@@ -1,12 +1,10 @@
-import { IntlProvider } from 'react-intl';
-import { loadLocaleData } from 'utils/language-service';
+import { RawIntlProvider } from 'react-intl';
+import { intl } from 'utils/language-service';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 import routesConfig from 'utils/routes';
 import { Suspense } from 'react';
 import PageLoading from 'components/page-loading';
-
-const { locale, messages } = loadLocaleData();
 
 function AppRoutes() {
   const routes = useRoutes(routesConfig);
@@ -15,7 +13,7 @@ function AppRoutes() {
 
 function AppIntlWrapper() {
   return (
-    <IntlProvider messages={messages} locale={locale}>
+    <RawIntlProvider value={intl}>
       <HelmetProvider>
         <Helmet titleTemplate="TINEL Meetup - %s" />
 
@@ -25,7 +23,7 @@ function AppIntlWrapper() {
           </Suspense>
         </Router>
       </HelmetProvider>
-    </IntlProvider>
+    </RawIntlProvider>
   );
 }
 

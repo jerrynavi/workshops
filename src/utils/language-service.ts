@@ -1,9 +1,12 @@
 import enUS from 'lang/en-US.json';
 import hrHR from 'lang/hr-HR.json';
+import { createIntlCache, createIntl } from 'react-intl';
+
+const cache = createIntlCache();
 
 type LocalesSupported = Record<string, Record<string, string>>;
 
-export const loadLocaleData = (locale?: string) => {
+const loadLocaleData = (locale?: string) => {
   // handle setting the user's locale
   let userLocale: string;
   if (!locale) {
@@ -30,3 +33,13 @@ export const loadLocaleData = (locale?: string) => {
     locale: userLocale,
   };
 };
+
+const { messages, locale } = loadLocaleData();
+
+export const intl = createIntl(
+  {
+    messages,
+    locale,
+  },
+  cache,
+);
