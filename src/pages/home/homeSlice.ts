@@ -37,15 +37,21 @@ const slice = createSlice({
     builder.addMatcher(
       api.endpoints.getWorkshops.matchPending,
       (state, { meta }) => {
-        const { activeCategory } = state;
+        const { activeCategory, lastPage } = state;
         const {
           arg: { originalArgs },
         } = meta;
+        const shouldCheckForInvalidPagination =
+          lastPage != null && originalArgs?._page != null;
+        if (shouldCheckForInvalidPagination && lastPage > originalArgs._page!) {
+          state.lastPage = 1;
+        }
         if (
           activeCategory !== originalArgs?.category ||
           (!originalArgs?.category && activeCategory != null)
         ) {
           state.data = [];
+          state.lastPage = 1;
         }
       },
     );

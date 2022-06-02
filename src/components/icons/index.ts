@@ -5,6 +5,7 @@ import ChevronDownIcon from './ChevronDownIcon';
 import ClockIcon from './ClockIcon';
 import CloseIcon from './CloseIcon';
 import CodeIcon from './CodeIcon';
+import ErrorIcon from './ErrorIcon';
 import FlashIcon from './FlashIcon';
 import LayoutIcon from './LayoutIcon';
 import LoadingCircleIcon from './LoadingCircleIcon';
@@ -24,4 +25,5 @@ export {
   CloseIcon,
   TrashIcon,
   LoadingCircleIcon,
+  ErrorIcon,
 };

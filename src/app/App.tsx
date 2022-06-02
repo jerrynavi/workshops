@@ -5,6 +5,7 @@ import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 import routesConfig from 'utils/routes';
 import { Suspense } from 'react';
 import PageLoading from 'components/page-loading';
+import { ToastContainer } from 'react-toastify';
 
 function AppRoutes() {
   const routes = useRoutes(routesConfig);
@@ -20,6 +21,11 @@ function AppIntlWrapper() {
         <Router>
           <Suspense fallback={<PageLoading />}>
             <AppRoutes />
+            <ToastContainer
+              hideProgressBar
+              pauseOnFocusLoss={false}
+              limit={1}
+            />
           </Suspense>
         </Router>
       </HelmetProvider>

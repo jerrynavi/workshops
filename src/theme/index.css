@@ -15,8 +15,20 @@
 @import './layout.css';
 @import './inputs.css';
 
+@import '~react-toastify/dist/ReactToastify.min.css';
+
 html,
 body,
 #root {
   height: 100%;
+}
+
+:root {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #0d0d0d;
+  --toastify-color-info: #0097cc;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #ff392e;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
 }
