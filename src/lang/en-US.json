@@ -31,5 +31,6 @@
   "agreeTerms": "I agree",
   "isRequired": "{fieldName} is required",
   "isInvalid": "Your {fieldName} contains invalid symbol(s)",
-  "emailInvalid": "Provided email is not valid"
+  "emailInvalid": "Provided email is not valid",
+  "zipInvalid": "Zip code must be at least five (5) numbers"
 }

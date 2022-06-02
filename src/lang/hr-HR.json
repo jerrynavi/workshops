@@ -31,5 +31,6 @@
   "agreeTerms": "Slažem se",
   "isRequired": "{fieldName} je obavezan",
   "isInvalid": "Vaš {fieldName} sadrži nevažeće simbole",
-  "emailInvalid": "Navedena e-pošta nije važeća"
+  "emailInvalid": "Navedena e-pošta nije važeća",
+  "zipInvalid": "Poštanski broj mora imati najmanje pet (5) znakova"
 }

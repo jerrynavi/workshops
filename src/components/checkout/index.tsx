@@ -16,14 +16,14 @@ export default function Checkout() {
 
   const closeCheckout = () => {
     dispatch(toggleCheckoutOpen(false));
-    // setSaveSuccess(false);
+    setSaveSuccess(false);
   };
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="relative z-10"
+        className="relative z-50"
         open={isOpen}
         onClose={closeCheckout}
       >

@@ -77,6 +77,14 @@ export default function Workshop() {
     }
   }, [relatedWorkshopsTrigger, workshop?.category]);
 
+  useEffect(() => {
+    window.scroll({
+      behavior: 'smooth',
+      top: 0,
+      left: 0,
+    });
+  }, [id]);
+
   return (
     <div className="page">
       <aside className="w-full pl-5 md:px-5 md:w-3/12">

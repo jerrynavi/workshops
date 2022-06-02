@@ -31,8 +31,21 @@ const checkoutFormSchema = object({
     ),
   dateOfBirth: date().optional().nullable(),
   gender: string().optional().nullable(),
-  address: string().optional().nullable().min(10),
-  zipCode: number().optional().nullable().min(5),
+  address: string().optional().nullable(),
+  zipCode: number()
+    .typeError(
+      intl.formatMessage({
+        id: 'zipInvalid',
+      }),
+    )
+    .optional()
+    .nullable()
+    .min(
+      5,
+      intl.formatMessage({
+        id: 'zipInvalid',
+      }),
+    ),
 });
 
 export default checkoutFormSchema;
