@@ -4,6 +4,7 @@ import li from 'li';
 
 type WorkshopCollectionQueryType = {
   _page?: number;
+  _limit?: number;
   category?: CategoryType;
 } | void;
 
@@ -25,9 +26,9 @@ export const api = createApi({
         if (query == null) {
           return 'workshops';
         }
-        const { _page, category } = query;
+        const { _page, _limit, category } = query;
         const _query = new URLSearchParams({
-          _limit: `${9}`,
+          _limit: `${_limit ?? 9}`,
           ...(_page != null && {
             _page: `${_page}`,
           }),

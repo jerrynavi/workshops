@@ -52,7 +52,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="flex justify-center md:justify-end md:mr-52 xl:mr-60 mt-[30px] md:mt-10">
+        <div className="flex justify-center md:justify-end md:mr-52 xl:mr-60 mt-[30px] md:mt-10 pb-5">
           <button
             className="btn load-more"
             type="button"

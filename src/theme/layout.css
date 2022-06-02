@@ -9,10 +9,10 @@
 }
 
 .footer {
-  @apply bg-light-gray bg-opacity-10 pl-10 md:pl-20 py-3 md:py-8 mt-12 absolute bottom-0 w-full;
+  @apply bg-light-gray bg-opacity-10 pl-10 md:pl-20 py-3 md:py-8 mt-12 absolute bottom-0 w-full border-t border-solid border-white;
 }
 
 .page {
   @apply min-h-full w-full flex flex-row flex-wrap
-  py-6 md:py-[60px] px-5;
+  py-6 md:pt-[60px] md:pb-10;
 }
