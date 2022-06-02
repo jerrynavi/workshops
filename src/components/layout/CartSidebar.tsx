@@ -1,4 +1,4 @@
-import { toggleOpen } from 'components/cart/cartSlice';
+import { toggleSidebarOpen } from 'components/cart/cartSlice';
 import { useAppDispatch, useCart } from 'store/hooks';
 import { Transition, Dialog } from '@headlessui/react';
 import { Fragment } from 'react';
@@ -13,7 +13,7 @@ export default function CartSidebar() {
   const dispatch = useAppDispatch();
 
   function closeModal() {
-    dispatch(toggleOpen(false));
+    dispatch(toggleSidebarOpen(false));
   }
 
   return (

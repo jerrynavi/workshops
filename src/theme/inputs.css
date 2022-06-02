@@ -1,0 +1,40 @@
+.input-group {
+  @apply flex flex-col w-full mb-9;
+}
+
+.checkbox-group label {
+  @apply inline-block ml-[10px] text-h6-mobile md:text-h6 font-semibold text-darker-gray;
+}
+
+.input-header {
+  @apply flex flex-col md:flex-row md:justify-between md:items-center mb-[3px] md:mb-[5px];
+}
+
+.input-header label {
+  @apply text-h6-mobile md:text-h6 font-bold text-darker-gray;
+}
+
+span.has-error {
+  @apply text-h6-mobile md:text-h6 text-red font-semibold;
+}
+
+input[type='text'],
+input[type='date'] {
+  @apply border-0 border-b-2 border-solid border-blue transition-colors
+  focus:bg-lighter-gray focus:ring-0
+  outline-none;
+}
+
+input {
+  @apply pl-5 py-[14px] placeholder:-ml-5 placeholder:inline-block;
+}
+
+input[type='checkbox'] {
+  @apply rounded border-blue h-8 w-8 checked:bg-blue hover:bg-blue cursor-pointer;
+}
+
+.has-error input[type='text'],
+.has-error select,
+.has-error input[type='date'] {
+  @apply border-red;
+}

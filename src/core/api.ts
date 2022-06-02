@@ -74,6 +74,13 @@ export const api = createApi({
         };
       },
     }),
+    saveOrder: builder.query<unknown, Record<string, unknown>>({
+      query: (data) => ({
+        url: 'orders',
+        method: 'POST',
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -82,4 +89,5 @@ export const {
   useLazyGetWorkshopByIdQuery,
   useLazyGetWorkshopsQuery,
   useLazyGetUserByIdQuery,
+  useLazySaveOrderQuery,
 } = api;
