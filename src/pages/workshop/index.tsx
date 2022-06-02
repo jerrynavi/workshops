@@ -91,7 +91,7 @@ export default function Workshop() {
         </div>
       </aside>
 
-      <section className="w-full pr-5 md:px-5 md:w-9/12">
+      <section className="w-full px-5 md:w-9/12">
         {!!workshop && !workshopBusy && (
           <>
             <figure className="workshop-banner relative">

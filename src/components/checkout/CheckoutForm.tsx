@@ -23,16 +23,16 @@ type CheckoutFormFields = {
 
 const genderOptions = [
   {
+    id: 'other',
+    label: 'prefer not to say',
+  },
+  {
     id: 'male',
     label: 'Male',
   },
   {
     id: 'female',
     label: 'Female',
-  },
-  {
-    id: 'other',
-    label: 'prefer not to say',
   },
 ];
 
@@ -236,6 +236,7 @@ export default function CheckoutForm({ onSuccess }: FormProps) {
       <button
         className="btn btn-primary w-full mt-7 md:w-fit md:px-8"
         type="submit"
+        disabled={!agreeTerms}
       >
         <FormattedMessage id="checkout" />
       </button>

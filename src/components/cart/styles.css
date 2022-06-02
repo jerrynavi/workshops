@@ -4,16 +4,20 @@
   h-fit md:py-[50px] md:px-10 md:mt-10;
 }
 
+.cart-item-chooser {
+  @apply relative;
+}
+
+.cart-item-chooser .quantity-chooser ul {
+  @apply -bottom-6 top-[unset] max-h-40;
+}
+
 .quantity-chooser button:not(.btn-primary) {
   @apply font-bold text-blue border h-full border-blue rounded-lg text-h5-mobile md:text-h5 flex items-center gap-x-2 w-fit py-3 pl-2 pr-4 bg-white;
 }
 
 .quantity-chooser ul {
-  @apply absolute bottom-12 md:bottom-[unset] mt-1 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-20;
-}
-
-.cart-item-chooser .quantity-chooser ul {
-  @apply bottom-[unset] top-12;
+  @apply absolute bottom-12 md:bottom-[unset] mt-1 max-h-60 w-fit overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50;
 }
 
 .quantity-chooser li {

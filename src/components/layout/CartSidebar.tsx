@@ -7,6 +7,7 @@ import CartItem from 'components/cart/CartItem';
 import { FormattedMessage } from 'react-intl';
 import Price from 'components/Price';
 import ShoppingCartIcon from 'components/cart/ShoppingCartIcon';
+import { toggleCheckoutOpen } from 'components/checkout/checkoutSlice';
 
 export default function CartSidebar() {
   const { open, items, subtotal } = useCart();
@@ -16,9 +17,19 @@ export default function CartSidebar() {
     dispatch(toggleSidebarOpen(false));
   }
 
+  function openCheckout() {
+    closeModal();
+    dispatch(toggleCheckoutOpen(true));
+  }
+
   return (
     <Transition appear show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-30" onClose={closeModal}>
+      <Dialog
+        as="div"
+        className="relative z-30"
+        open={open}
+        onClose={closeModal}
+      >
         <div className="fixed inset-0 overflow-y-auto">
           <div className="relative flex justify-end items-end md:items-start max-h-screen">
             <Transition.Child
@@ -65,8 +76,11 @@ export default function CartSidebar() {
 
                     <Price value={subtotal} />
 
-                    <button className="btn bg-blue text-white w-full mt-5">
-                      Checkout
+                    <button
+                      className="btn bg-blue text-white w-full mt-5"
+                      onClick={openCheckout}
+                    >
+                      <FormattedMessage id="checkout" />
                     </button>
                   </div>
                 )}

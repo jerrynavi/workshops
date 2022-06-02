@@ -16,11 +16,17 @@ export default function Checkout() {
 
   const closeCheckout = () => {
     dispatch(toggleCheckoutOpen(false));
+    // setSaveSuccess(false);
   };
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={closeCheckout}>
+      <Dialog
+        as="div"
+        className="relative z-10"
+        open={isOpen}
+        onClose={closeCheckout}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

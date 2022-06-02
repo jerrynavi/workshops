@@ -19,10 +19,6 @@ const routesConfig: RouteObject[] = [
         element: <Workshop />,
       },
       {
-        path: '/checkout',
-        // element: <Checkout />,
-      },
-      {
         path: '',
       },
     ],
